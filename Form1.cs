@@ -13,30 +13,33 @@ namespace task2
 {
     public partial class Form1 : Form
     {
-        double h, s, v;
+        double h = 1.0, s = 1.0, v = 1.0;
+        Dictionary<int, int> red = new Dictionary<int, int>(255);
+        Dictionary<int, int> green = new Dictionary<int, int>(255);
+        Dictionary<int, int> blue = new Dictionary<int, int>(255);
         Color ColorFromHSV(int H, int S, int V)
         {
             int Hi = (int)Math.Floor(H / 60.0) % 6;
 
             double f = H / 60.0 - Math.Floor(H / 60.0);
-            int p = (int)(V * (1 - S));
-            int q = (int)(V * (1 - f * S));
-            int t = (int)(V * (1 - (1 - f) * S));
+            double p = V * (1 - S);
+            double q = V * (1 - f * S);
+            double t = V * (1 - (1 - f) * S);
 
             switch (Hi)
             {
                 case 0:
-                    return Color.FromArgb(255, V, t, p);
+                    return Color.FromArgb(255, V, (int)t, (int)p);
                 case 1:
-                    return Color.FromArgb(255, q, V, p);
+                    return Color.FromArgb(255, (int)q, V, (int)p);
                 case 2:
-                    return Color.FromArgb(255, p, V, t);
+                    return Color.FromArgb(255, (int)p, V, (int)t);
                 case 3:
-                    return Color.FromArgb(255, p, q, V);
+                    return Color.FromArgb(255, (int)p, (int)q, V);
                 case 4:
-                    return Color.FromArgb(255, t, p, V);
+                    return Color.FromArgb(255, (int)t, (int)p, V);
                 case 5:
-                    return Color.FromArgb(255, V, p, q);
+                    return Color.FromArgb(255, V, (int)p, (int)q);
                 default:
                     return new Color();
             }
@@ -86,6 +89,12 @@ namespace task2
             pictureBox1.ImageLocation = Environment.CurrentDirectory + "\\mona_lisa.jpg";
             pictureBox1.Load();
 
+            for (int i = 0; i < 256; i++)
+            {
+                red[i] = 0;
+                green[i] = 0;
+                blue[i] = 0;
+            }
 
             var bitmap1 = new Bitmap(pictureBox1.Image);
             var bitmap2 = new Bitmap(pictureBox1.Image);
@@ -103,6 +112,10 @@ namespace task2
                 for (var j = 0; j < bitmap1.Height; ++j)
                 {
                     var c = bitmap1.GetPixel(i, j);
+
+                    red[c.R]++; 
+                    green[c.G]++;
+                    blue[c.B]++;
 
                     var grey1 = (int)(0.3 * c.R + 0.59 * c.G + 0.11 * c.B);
                     var grey2 = (int)(0.21 * c.R + 0.72 * c.G + 0.07 * c.B);
@@ -130,11 +143,6 @@ namespace task2
 
                     new_color = ColorFromHSV((int)H, (int)S, (int)V);
                     bitmap_hsv.SetPixel(i, j, new_color);
-
-
-
-                    
-
                 }
             }
 
@@ -147,6 +155,53 @@ namespace task2
             pictureBox7.Image = bitmap_blue;
 
             pictureBox8.Image = bitmap_hsv;
+
+            int w = pictureBox_hist.Width, h = pictureBox_hist.Height;
+            var p = new Pen(Color.Black, 2.0f);
+            var hist_bmp = new Bitmap(w, h);
+            var gr = Graphics.FromImage(hist_bmp);
+            gr.Clear(Color.White);
+            
+
+            var step = ((w - 40) * 1.0 / 255) * 50;
+            var temp = 20;
+            for ( int i = 0; i < 255; i+=50)
+            {
+                gr.DrawLine(p, new Point(temp, h - 20), new Point(temp, h - 15));
+                gr.DrawLine(new Pen(Color.Gray,0.5f), new Point(temp, h - 20), new Point(temp, 20));
+                gr.DrawString(i.ToString(), SystemFonts.DefaultFont, Brushes.Black, new PointF(temp, h - 15));
+                temp += (int)step;
+            }
+
+            var mx = Math.Max(Math.Max(red.Values.Max(), green.Values.Max()), blue.Values.Max());
+            step = (h - 40) * 1.0 / 4;
+            temp = h - 20;
+            for (int i = 0; i < mx; i += mx/4)
+            {
+                gr.DrawLine(p, new Point(17, temp), new Point(20, temp));
+                gr.DrawLine(new Pen(Color.Gray, 0.5f), new Point(20, temp), new Point(w-20, temp));
+                gr.DrawString(i.ToString(), SystemFonts.DefaultFont, Brushes.Black, new PointF(0, temp-15));
+                temp -= (int)step;
+            }
+
+            gr.DrawLine(p, new Point(20, h - 20), new Point(20, 20));
+            gr.DrawLine(p, new Point(20, h - 20), new Point(w - 20, h - 20));
+
+            var one_h = (h - 40)*1.0 / mx;
+            var one_w = (int)((w - 40)*1.0 / 256);
+
+            var x = 20;
+
+            for (int i = 1; i < 256; i++)
+            {
+                gr.DrawLine(new Pen(Color.Red, 1.5f), new Point(x, (int)(h-20-red[i - 1] * one_h)), new Point(x + one_w, (int)(h - 20 - red[i] * one_h)));
+                gr.DrawLine(new Pen(Color.Green, 1.5f), new Point(x, (int)(h - 20 - green[i - 1] * one_h)), new Point(x + one_w, (int)(h - 20 - green[i] * one_h)));
+                gr.DrawLine(new Pen(Color.Blue, 1.5f), new Point(x, (int)(h - 20 - blue[i - 1] * one_h)), new Point(x + one_w, (int)(h - 20 - blue[i] * one_h)));
+                x += one_w;
+            }
+
+            pictureBox_hist.Image = hist_bmp;
+
         }
 
         private void RedrawHSV()
@@ -181,24 +236,19 @@ namespace task2
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            h = trackBar1.Value / trackBar1.Maximum;
+            h = trackBar1.Value*1.0 / trackBar1.Maximum;
             RedrawHSV();
         }
 
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
-            s = trackBar2.Value / trackBar2.Maximum;
+            s = trackBar2.Value * 1.0 / trackBar2.Maximum;
             RedrawHSV();
         }
 
         private void trackBar3_Scroll(object sender, EventArgs e)
         {
-            v = trackBar3.Value / trackBar3.Maximum;
-            RedrawHSV();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+            v = trackBar3.Value * 1.0 / trackBar3.Maximum;
             RedrawHSV();
         }
     }
