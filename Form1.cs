@@ -13,7 +13,7 @@ namespace task2
 {
     public partial class Form1 : Form
     {
-        double h = 1.0, s = 1.0, v = 1.0;
+        double h = 1.0, s = 0.0, v = 0.0;
         Dictionary<int, int> red = new Dictionary<int, int>(255);
         Dictionary<int, int> green = new Dictionary<int, int>(255);
         Dictionary<int, int> blue = new Dictionary<int, int>(255);
@@ -21,7 +21,7 @@ namespace task2
         Dictionary<int, int> grey1_map = new Dictionary<int, int>(255);
         Dictionary<int, int> grey2_map = new Dictionary<int, int>(255);
 
-        Color ColorFromHSV(int H, int S, int V)
+        Color ColorFromHSV(int H, double S, double V)
         {
             int Hi = (int)Math.Floor(H / 60.0) % 6;
 
@@ -33,17 +33,17 @@ namespace task2
             switch (Hi)
             {
                 case 0:
-                    return Color.FromArgb(255, V, (int)t, (int)p);
+                    return Color.FromArgb(255, (int)(255 * V), (int)(255 * t), (int)(255 * p));
                 case 1:
-                    return Color.FromArgb(255, (int)q, V, (int)p);
+                    return Color.FromArgb(255, (int)(255 * q), (int)(255 * V), (int)(255 * p));
                 case 2:
-                    return Color.FromArgb(255, (int)p, V, (int)t);
+                    return Color.FromArgb(255, (int)(255 * p), (int)(255 * V), (int)(255 * t));
                 case 3:
-                    return Color.FromArgb(255, (int)p, (int)q, V);
+                    return Color.FromArgb(255, (int)(255 * p), (int)(255 * q), (int)(255 * V));
                 case 4:
-                    return Color.FromArgb(255, (int)t, (int)p, V);
+                    return Color.FromArgb(255, (int)(255 * t), (int)(255 * p), (int)(255 * V));
                 case 5:
-                    return Color.FromArgb(255, V, (int)p, (int)q);
+                    return Color.FromArgb(255, (int)(255 * V), (int)(255 * p), (int)(255 * q));
                 default:
                     return new Color();
             }
@@ -51,33 +51,37 @@ namespace task2
 
         (double, double, double) ColorToHSV(Color c)
         {
-            var MAX = Math.Max(Math.Max(c.R, c.G), c.B);
-            var MIN = Math.Min(Math.Min(c.R, c.G), c.B);
+            var R = c.R / 255.0;
+            var G = c.G / 255.0;
+            var B = c.B / 255.0;
+            var MAX = Math.Max(Math.Max(R, G), B);
+            var MIN = Math.Min(Math.Min(R, G), B);
+
 
             var V = MAX;
             var S = MAX == 0 ? 0 : 1 - MIN / MAX;
 
-            var H = 0;
+            var H = 0.0;
             if (MAX != MIN)
             {
-                if (MAX == c.R)
+                if (MAX == R)
                 {
-                    if (c.G >= c.B)
+                    if (G >= B)
                     {
-                        H = 60 * (c.G - c.B) / (MAX - MIN);
+                        H = 60 * (G - B) / (MAX - MIN);
                     }
                     else
                     {
-                        H = 60 * (c.G - c.B) / (MAX - MIN) + 360;
+                        H = 60 * (G - B) / (MAX - MIN) + 360;
                     }
                 }
-                else if (MAX == c.G)
+                else if (MAX == G)
                 {
-                    H = 60 * (c.B - c.R) / (MAX - MIN) + 120;
+                    H = 60 * (B - R) / (MAX - MIN) + 120;
                 }
                 else
                 {
-                    H = 60 * (c.R - c.G) / (MAX - MIN) + 240;
+                    H = 60 * (R - G) / (MAX - MIN) + 240;
                 }
             }
             return (H, S, V);
@@ -152,7 +156,7 @@ namespace task2
 
                     (var H, var S, var V) = ColorToHSV(c);
 
-                    new_color = ColorFromHSV((int)H, (int)S, (int)V);
+                    new_color = ColorFromHSV((int)H, S, V);
                     bitmap_hsv.SetPixel(i, j, new_color);
                 }
             }
@@ -233,11 +237,23 @@ namespace task2
                 {
                     var c = bitmap.GetPixel(i, j);
                     (var H, var S, var V) = ColorToHSV(c);
-                    H *= h;
-                    S *= s;
-                    V *= v;
+                    //H *= h;
+                    int H1 = ((int)H + trackBar1.Value) % 360;
+                    S += s;
+                    //V = V+v > 1.0? V+v-1: V+v;
+                    V += v;
 
-                    c = ColorFromHSV((int)H, (int)S, (int)V);
+                    if (V < 0)
+                        V = 0;
+                    if (S < 0)
+                        S = 0;
+                    if (V > 1)
+                        V = 1;
+                    if (S > 1)
+                        S = 1;
+
+
+                    c = ColorFromHSV(H1, S, V);
                     bitmap.SetPixel(i, j, c);
                 }
             }
@@ -257,19 +273,18 @@ namespace task2
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             h = trackBar1.Value * 1.0 / trackBar1.Maximum;
-
             RedrawHSV();
         }
 
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
-            s = trackBar2.Value * 1.0 / trackBar2.Maximum;
+            s = trackBar2.Value * 1.0 / (trackBar2.Maximum - trackBar2.Minimum);
             RedrawHSV();
         }
 
         private void trackBar3_Scroll(object sender, EventArgs e)
         {
-            v = trackBar3.Value * 1.0 / trackBar3.Maximum;
+            v = trackBar3.Value * 1.0 / (trackBar3.Maximum - trackBar3.Minimum);
             RedrawHSV();
         }
     }

@@ -18,3 +18,13 @@ C:\Users\barakuda\Source\Repos\computer_graphics\obj\Debug\task2.csproj.Generate
 C:\Users\barakuda\Source\Repos\computer_graphics\obj\Debug\task2.csproj.CoreCompileInputs.cache
 C:\Users\barakuda\Source\Repos\computer_graphics\obj\Debug\task2.exe
 C:\Users\barakuda\Source\Repos\computer_graphics\obj\Debug\task2.pdb
+C:\Users\Tema-\Desktop\Универ\4.1\КГ\t2\bin\Debug\task2.exe.config
+C:\Users\Tema-\Desktop\Универ\4.1\КГ\t2\bin\Debug\task2.exe
+C:\Users\Tema-\Desktop\Универ\4.1\КГ\t2\bin\Debug\task2.pdb
+C:\Users\Tema-\Desktop\Универ\4.1\КГ\t2\obj\Debug\task2.csprojAssemblyReference.cache
+C:\Users\Tema-\Desktop\Универ\4.1\КГ\t2\obj\Debug\task2.Form1.resources
+C:\Users\Tema-\Desktop\Универ\4.1\КГ\t2\obj\Debug\task2.Properties.Resources.resources
+C:\Users\Tema-\Desktop\Универ\4.1\КГ\t2\obj\Debug\task2.csproj.GenerateResource.cache
+C:\Users\Tema-\Desktop\Универ\4.1\КГ\t2\obj\Debug\task2.csproj.CoreCompileInputs.cache
+C:\Users\Tema-\Desktop\Универ\4.1\КГ\t2\obj\Debug\task2.exe
+C:\Users\Tema-\Desktop\Универ\4.1\КГ\t2\obj\Debug\task2.pdb
