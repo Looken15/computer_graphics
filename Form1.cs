@@ -17,11 +17,10 @@ namespace task2
         Dictionary<int, int> red = new Dictionary<int, int>(255);
         Dictionary<int, int> green = new Dictionary<int, int>(255);
         Dictionary<int, int> blue = new Dictionary<int, int>(255);
-<<<<<<< HEAD
+
         Dictionary<int, int> grey1_map = new Dictionary<int, int>(255);
         Dictionary<int, int> grey2_map = new Dictionary<int, int>(255);
-=======
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+
         Color ColorFromHSV(int H, int S, int V)
         {
             int Hi = (int)Math.Floor(H / 60.0) % 6;
@@ -99,11 +98,10 @@ namespace task2
                 red[i] = 0;
                 green[i] = 0;
                 blue[i] = 0;
-<<<<<<< HEAD
+
                 grey1_map[i] = 0;
                 grey2_map[i] = 0;
-=======
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+
             }
 
             var bitmap1 = new Bitmap(pictureBox1.Image);
@@ -123,11 +121,8 @@ namespace task2
                 {
                     var c = bitmap1.GetPixel(i, j);
 
-<<<<<<< HEAD
+
                     red[c.R]++;
-=======
-                    red[c.R]++; 
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
                     green[c.G]++;
                     blue[c.B]++;
 
@@ -177,7 +172,7 @@ namespace task2
             var hist_bmp = new Bitmap(w, h);
             var gr = Graphics.FromImage(hist_bmp);
             gr.Clear(Color.White);
-<<<<<<< HEAD
+
 
 
             var step = ((w - 40) * 1.0 / 255) * 50;
@@ -186,16 +181,7 @@ namespace task2
             {
                 gr.DrawLine(p, new Point(temp, h - 20), new Point(temp, h - 15));
                 gr.DrawLine(new Pen(Color.Gray, 0.5f), new Point(temp, h - 20), new Point(temp, 20));
-=======
-            
 
-            var step = ((w - 40) * 1.0 / 255) * 50;
-            var temp = 20;
-            for ( int i = 0; i < 255; i+=50)
-            {
-                gr.DrawLine(p, new Point(temp, h - 20), new Point(temp, h - 15));
-                gr.DrawLine(new Pen(Color.Gray,0.5f), new Point(temp, h - 20), new Point(temp, 20));
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
                 gr.DrawString(i.ToString(), SystemFonts.DefaultFont, Brushes.Black, new PointF(temp, h - 15));
                 temp += (int)step;
             }
@@ -203,48 +189,34 @@ namespace task2
             var mx = Math.Max(Math.Max(red.Values.Max(), green.Values.Max()), blue.Values.Max());
             step = (h - 40) * 1.0 / 4;
             temp = h - 20;
-<<<<<<< HEAD
+
             for (int i = 0; i < mx; i += mx / 4)
             {
                 gr.DrawLine(p, new Point(17, temp), new Point(20, temp));
                 gr.DrawLine(new Pen(Color.Gray, 0.5f), new Point(20, temp), new Point(w - 20, temp));
                 gr.DrawString(i.ToString(), SystemFonts.DefaultFont, Brushes.Black, new PointF(0, temp - 15));
-=======
-            for (int i = 0; i < mx; i += mx/4)
-            {
-                gr.DrawLine(p, new Point(17, temp), new Point(20, temp));
-                gr.DrawLine(new Pen(Color.Gray, 0.5f), new Point(20, temp), new Point(w-20, temp));
-                gr.DrawString(i.ToString(), SystemFonts.DefaultFont, Brushes.Black, new PointF(0, temp-15));
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+
                 temp -= (int)step;
             }
 
             gr.DrawLine(p, new Point(20, h - 20), new Point(20, 20));
             gr.DrawLine(p, new Point(20, h - 20), new Point(w - 20, h - 20));
 
-<<<<<<< HEAD
             var one_h = (h - 40) * 1.0 / mx;
             var one_w = (int)((w - 40) * 1.0 / 256);
-=======
-            var one_h = (h - 40)*1.0 / mx;
-            var one_w = (int)((w - 40)*1.0 / 256);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+
 
             var x = 20;
 
             for (int i = 1; i < 256; i++)
             {
-<<<<<<< HEAD
+
                 gr.DrawLine(new Pen(Color.Red, 1.5f), new Point(x, (int)(h - 20 - red[i - 1] * one_h)), new Point(x + one_w, (int)(h - 20 - red[i] * one_h)));
                 gr.DrawLine(new Pen(Color.Green, 1.5f), new Point(x, (int)(h - 20 - green[i - 1] * one_h)), new Point(x + one_w, (int)(h - 20 - green[i] * one_h)));
                 gr.DrawLine(new Pen(Color.Blue, 1.5f), new Point(x, (int)(h - 20 - blue[i - 1] * one_h)), new Point(x + one_w, (int)(h - 20 - blue[i] * one_h)));
                 gr.DrawLine(new Pen(Color.LightGray, 1.5f), new Point(x, (int)(h - 20 - grey1_map[i - 1] * one_h)), new Point(x + one_w, (int)(h - 20 - grey1_map[i] * one_h)));
                 gr.DrawLine(new Pen(Color.DarkGray, 1.5f), new Point(x, (int)(h - 20 - grey2_map[i - 1] * one_h)), new Point(x + one_w, (int)(h - 20 - grey2_map[i] * one_h)));
-=======
-                gr.DrawLine(new Pen(Color.Red, 1.5f), new Point(x, (int)(h-20-red[i - 1] * one_h)), new Point(x + one_w, (int)(h - 20 - red[i] * one_h)));
-                gr.DrawLine(new Pen(Color.Green, 1.5f), new Point(x, (int)(h - 20 - green[i - 1] * one_h)), new Point(x + one_w, (int)(h - 20 - green[i] * one_h)));
-                gr.DrawLine(new Pen(Color.Blue, 1.5f), new Point(x, (int)(h - 20 - blue[i - 1] * one_h)), new Point(x + one_w, (int)(h - 20 - blue[i] * one_h)));
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+
                 x += one_w;
             }
 
@@ -284,11 +256,8 @@ namespace task2
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             h = trackBar1.Value * 1.0 / trackBar1.Maximum;
-=======
-            h = trackBar1.Value*1.0 / trackBar1.Maximum;
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+
             RedrawHSV();
         }
 

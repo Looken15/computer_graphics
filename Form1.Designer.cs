@@ -66,17 +66,10 @@ namespace task2
             // 
             this.pictureBox1.ImageLocation = "image.jpg";
             this.pictureBox1.InitialImage = null;
-<<<<<<< HEAD
             this.pictureBox1.Location = new System.Drawing.Point(15, 43);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(299, 450);
-=======
-            this.pictureBox1.Location = new System.Drawing.Point(11, 35);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(224, 366);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -85,17 +78,10 @@ namespace task2
             // 
             this.pictureBox2.ImageLocation = "";
             this.pictureBox2.InitialImage = null;
-<<<<<<< HEAD
-            this.pictureBox2.Location = new System.Drawing.Point(333, 43);
+            this.pictureBox2.Location = new System.Drawing.Point(297, 43);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(299, 450);
-=======
-            this.pictureBox2.Location = new System.Drawing.Point(250, 35);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(224, 366);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -103,17 +89,10 @@ namespace task2
             // 
             this.pictureBox3.ImageLocation = "";
             this.pictureBox3.InitialImage = null;
-<<<<<<< HEAD
-            this.pictureBox3.Location = new System.Drawing.Point(649, 43);
+            this.pictureBox3.Location = new System.Drawing.Point(591, 43);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(299, 450);
-=======
-            this.pictureBox3.Location = new System.Drawing.Point(487, 35);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(224, 366);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
@@ -121,17 +100,10 @@ namespace task2
             // 
             this.pictureBox4.ImageLocation = "";
             this.pictureBox4.InitialImage = null;
-<<<<<<< HEAD
-            this.pictureBox4.Location = new System.Drawing.Point(969, 43);
+            this.pictureBox4.Location = new System.Drawing.Point(872, 43);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(299, 450);
-=======
-            this.pictureBox4.Location = new System.Drawing.Point(727, 35);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(224, 366);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
@@ -139,17 +111,10 @@ namespace task2
             // 
             this.pictureBox5.ImageLocation = "";
             this.pictureBox5.InitialImage = null;
-<<<<<<< HEAD
             this.pictureBox5.Location = new System.Drawing.Point(15, 569);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(299, 450);
-=======
-            this.pictureBox5.Location = new System.Drawing.Point(11, 462);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(224, 366);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
             // 
@@ -157,17 +122,10 @@ namespace task2
             // 
             this.pictureBox6.ImageLocation = "";
             this.pictureBox6.InitialImage = null;
-<<<<<<< HEAD
-            this.pictureBox6.Location = new System.Drawing.Point(333, 569);
+            this.pictureBox6.Location = new System.Drawing.Point(297, 569);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(299, 450);
-=======
-            this.pictureBox6.Location = new System.Drawing.Point(250, 462);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(224, 366);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
             // 
@@ -175,17 +133,10 @@ namespace task2
             // 
             this.pictureBox7.ImageLocation = "";
             this.pictureBox7.InitialImage = null;
-<<<<<<< HEAD
-            this.pictureBox7.Location = new System.Drawing.Point(649, 569);
+            this.pictureBox7.Location = new System.Drawing.Point(579, 569);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(299, 450);
-=======
-            this.pictureBox7.Location = new System.Drawing.Point(487, 462);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(224, 366);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
@@ -193,37 +144,21 @@ namespace task2
             // 
             this.pictureBox8.ImageLocation = "";
             this.pictureBox8.InitialImage = null;
-<<<<<<< HEAD
-            this.pictureBox8.Location = new System.Drawing.Point(1883, 43);
+            this.pictureBox8.Location = new System.Drawing.Point(1593, 43);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(299, 450);
-=======
-            this.pictureBox8.Location = new System.Drawing.Point(1412, 35);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(224, 366);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+            this.pictureBox8.Size = new System.Drawing.Size(259, 415);
             this.pictureBox8.TabIndex = 7;
             this.pictureBox8.TabStop = false;
             // 
             // trackBar2
             // 
-<<<<<<< HEAD
-            this.trackBar2.Location = new System.Drawing.Point(1883, 576);
+            this.trackBar2.Location = new System.Drawing.Point(1386, 261);
             this.trackBar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trackBar2.Maximum = 20;
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar2.Size = new System.Drawing.Size(299, 56);
-=======
-            this.trackBar2.Location = new System.Drawing.Point(1412, 468);
-            this.trackBar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.trackBar2.Maximum = 20;
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar2.Size = new System.Drawing.Size(224, 45);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+            this.trackBar2.Size = new System.Drawing.Size(201, 45);
             this.trackBar2.SmallChange = 5;
             this.trackBar2.TabIndex = 9;
             this.trackBar2.Value = 20;
@@ -231,21 +166,12 @@ namespace task2
             // 
             // trackBar1
             // 
-<<<<<<< HEAD
-            this.trackBar1.Location = new System.Drawing.Point(1883, 513);
+            this.trackBar1.Location = new System.Drawing.Point(1386, 198);
             this.trackBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trackBar1.Maximum = 20;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar1.Size = new System.Drawing.Size(299, 56);
-=======
-            this.trackBar1.Location = new System.Drawing.Point(1412, 417);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.trackBar1.Maximum = 20;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar1.Size = new System.Drawing.Size(224, 45);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+            this.trackBar1.Size = new System.Drawing.Size(201, 45);
             this.trackBar1.SmallChange = 5;
             this.trackBar1.TabIndex = 10;
             this.trackBar1.Value = 20;
@@ -253,21 +179,12 @@ namespace task2
             // 
             // trackBar3
             // 
-<<<<<<< HEAD
-            this.trackBar3.Location = new System.Drawing.Point(1883, 638);
+            this.trackBar3.Location = new System.Drawing.Point(1386, 323);
             this.trackBar3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trackBar3.Maximum = 20;
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar3.Size = new System.Drawing.Size(299, 56);
-=======
-            this.trackBar3.Location = new System.Drawing.Point(1412, 518);
-            this.trackBar3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.trackBar3.Maximum = 20;
-            this.trackBar3.Name = "trackBar3";
-            this.trackBar3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar3.Size = new System.Drawing.Size(224, 45);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+            this.trackBar3.Size = new System.Drawing.Size(201, 45);
             this.trackBar3.SmallChange = 5;
             this.trackBar3.TabIndex = 11;
             this.trackBar3.Value = 20;
@@ -277,12 +194,7 @@ namespace task2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-<<<<<<< HEAD
-            this.label1.Location = new System.Drawing.Point(1827, 513);
-=======
-            this.label1.Location = new System.Drawing.Point(1370, 417);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+            this.label1.Location = new System.Drawing.Point(1330, 198);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 24);
             this.label1.TabIndex = 12;
@@ -293,12 +205,7 @@ namespace task2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-<<<<<<< HEAD
-            this.label2.Location = new System.Drawing.Point(1827, 576);
-=======
-            this.label2.Location = new System.Drawing.Point(1370, 468);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+            this.label2.Location = new System.Drawing.Point(1330, 261);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 24);
             this.label2.TabIndex = 13;
@@ -308,12 +215,7 @@ namespace task2
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-<<<<<<< HEAD
-            this.label3.Location = new System.Drawing.Point(1827, 638);
-=======
-            this.label3.Location = new System.Drawing.Point(1370, 518);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+            this.label3.Location = new System.Drawing.Point(1330, 323);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 24);
             this.label3.TabIndex = 14;
@@ -321,80 +223,50 @@ namespace task2
             // 
             // pictureBox_hist
             // 
-<<<<<<< HEAD
-            this.pictureBox_hist.Location = new System.Drawing.Point(972, 699);
-            this.pictureBox_hist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox_hist.Location = new System.Drawing.Point(929, 509);
+            this.pictureBox_hist.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox_hist.Name = "pictureBox_hist";
-            this.pictureBox_hist.Size = new System.Drawing.Size(1535, 532);
-=======
-            this.pictureBox_hist.Location = new System.Drawing.Point(729, 568);
-            this.pictureBox_hist.Name = "pictureBox_hist";
-            this.pictureBox_hist.Size = new System.Drawing.Size(1151, 432);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+            this.pictureBox_hist.Size = new System.Drawing.Size(937, 473);
             this.pictureBox_hist.TabIndex = 15;
             this.pictureBox_hist.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-<<<<<<< HEAD
             this.label4.Location = new System.Drawing.Point(1997, 11);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 17);
-=======
-            this.label4.Location = new System.Drawing.Point(1498, 9);
-            this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
             this.label4.TabIndex = 16;
             this.label4.Text = "TASK 3";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-<<<<<<< HEAD
             this.label5.Location = new System.Drawing.Point(444, 538);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 17);
-=======
-            this.label5.Location = new System.Drawing.Point(333, 437);
-            this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
             this.label5.TabIndex = 17;
             this.label5.Text = "TASK 2";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-<<<<<<< HEAD
-            this.label6.Location = new System.Drawing.Point(1548, 677);
+            this.label6.Location = new System.Drawing.Point(1414, 480);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 17);
-=======
-            this.label6.Location = new System.Drawing.Point(1161, 550);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 13);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
+            this.label6.Size = new System.Drawing.Size(106, 13);
             this.label6.TabIndex = 18;
-            this.label6.Text = "TASK 2 histogram";
+            this.label6.Text = "TASK 1,2 histograms";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-<<<<<<< HEAD
             this.label7.Location = new System.Drawing.Point(607, 11);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 17);
-=======
-            this.label7.Location = new System.Drawing.Point(455, 9);
-            this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 13);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
             this.label7.TabIndex = 19;
             this.label7.Text = "TASK 1";
             // 
@@ -402,11 +274,7 @@ namespace task2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1924, 1055);
-=======
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -426,11 +294,7 @@ namespace task2
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> 98c79c5fb507ee89bd89cc4bb2c04dadfd1c8ca0
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "Form1";
